@@ -44,7 +44,7 @@ public class ProjectService {
 
         // Set client and project manager using IDs from the DTO
         Client client = clientRepository.findById(createProjectDTO.getClientId()).orElse(null);
-        User projectManager = userRepository.findById(createProjectDTO.getProjectManagerId()).orElse(null);
+        User projectManager =  User projectManager = userRepository.findById(userId).orElse(null);
 
         project.setClient(client);
         project.setProjectManager(projectManager);
